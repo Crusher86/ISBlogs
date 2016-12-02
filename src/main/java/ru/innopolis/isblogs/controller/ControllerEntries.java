@@ -39,6 +39,7 @@ public class ControllerEntries {
         ModelAndView modelAndView = new ModelAndView("diary");
         try {
             entries = entryDao.getAllById(diary_id);
+            modelAndView.addObject("blog_id", diary_id);
             modelAndView.addObject("entries", entries);
         } catch (ApplicationException e) {
             modelAndView.addObject("message", e.getMessage());
