@@ -1,19 +1,13 @@
-package ru.innopolis.isblogs.model.entity;
+package ru.innopolis.isblogs.model.models;
 
+/**
+ * Created by Crusher on 09.12.2016.
+ */
+public class UserModel extends CommonModel {
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "users")
-public class User extends CommonEntity{
-
-    @Column
     private String username;
-    @Column
     private String password;
-    @Column
+    private String confPassword;
     private boolean enabled;
 
     public String getUsername() {
@@ -38,5 +32,13 @@ public class User extends CommonEntity{
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public String getConfPassword() {
+        return confPassword;
+    }
+
+    public void setConfPassword(String confPassword) {
+        this.confPassword = confPassword;
     }
 }

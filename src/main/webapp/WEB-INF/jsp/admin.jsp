@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/jsp/index.jsp"%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <div class="container">
     <div class="row">
         <div class="col-md-6">

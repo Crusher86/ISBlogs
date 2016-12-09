@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Crusher
-  Date: 19.11.2016
-  Time: 14:31
-  To change this template use File | Settings | File Templates.
---%>
 <%@ include file="/WEB-INF/jsp/index.jsp"%>
 <div class="container">
     <div class="row centered-form">
@@ -19,14 +12,36 @@
                                 ${message}
                         </div>
                     </c:if>
-                    <form action="registration" method="POST">
+                    <form:form method="POST" action="registration" modelAttribute="userModel">
+                        <div hidden>
+                            <form:label path="id">ID</form:label>
+                            <form:input path="id" readonly="true"/>
+                        </div>
+                        <div hidden>
+                            <form:label path="version">Version</form:label>
+                            <form:input path="version" readonly="true"/>
+                        </div>
                         <div class="form-group">
-                            <input type="text" name="login" id="login" class="form-control input-sm floatlabel" placeholder="Login">
+                            <form:input type="text" path="username" class="form-control input-sm floatlabel" placeholder="Login" />
                         </div>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="first_name" id="first_name" class="form-control input-sm floatlabel" placeholder="First Name">
+                                    <form:input type="password" path="password" class="form-control input-sm" placeholder="Password" />
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <form:input type="password" path="confPassword" class="form-control input-sm" placeholder="Confirm Password" />
+                                </div>
+                            </div>
+                        </div>
+                    <%--</form:form>--%>
+                    <%--<form:form method="POST" action="registration" modelAttribute="profile">--%>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <%--<form:input type="text" path="firstName" class="form-control input-sm floatlabel" placeholder="First Name" />--%>
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6">
@@ -40,22 +55,11 @@
                             <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
                         </div>
 
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="password" name="conf_password" id="conf_password" class="form-control input-sm" placeholder="Confirm Password">
-                                </div>
-                            </div>
-                        </div>
+
 
                         <input type="submit" value="Register" class="btn btn-info btn-block">
 
-                    </form>
+                    </form:form>
                 </div>
             </div>
         </div>

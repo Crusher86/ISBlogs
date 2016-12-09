@@ -5,7 +5,7 @@ import java.sql.Date;
 /**
  * Created by Crusher on 30.11.2016.
  */
-public class Entry extends Model {
+public class Entry {
 
     private Date date;
     private String entry;
@@ -14,9 +14,7 @@ public class Entry extends Model {
     public Entry() {
     }
 
-    public Entry(int id) {
-        super(id);
-    }
+
 
     public Date getDate() {
         return date;

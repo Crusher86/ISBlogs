@@ -4,16 +4,14 @@ package ru.innopolis.isblogs.model.entity;
 /**
  * Created by Crusher on 30.11.2016.
  */
-public class Blog extends Model {
+public class Blog  {
 
     private String title;
 
     public Blog() {
     }
 
-    public Blog(int id) {
-        super(id);
-    }
+
 
     public String getTitle() {
         return title;

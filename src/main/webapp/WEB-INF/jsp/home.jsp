@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ include file="/WEB-INF/jsp/index.jsp"%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <div>
     <a class="navbar-brand" data-toggle="modal" data-target="#myModal">New</a>
     <div id="myModal" class="modal fade">
